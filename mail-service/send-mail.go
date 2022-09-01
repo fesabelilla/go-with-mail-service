@@ -13,13 +13,13 @@ func SendMail() {
 		"smtp.gmail.com",
 	)
 
-	msgBody := "Hi, Tapu vai. How are you ?"
+	msgBody := "Subject:Test Mail\nHow are you ?"
 
 	err := smtp.SendMail(
 		"smtp.gmail.com:587",
 		auth,
 		"fesabelilla.rokomari@gmail.com",
-		[]string{"tapu@rokomari.com"},
+		[]string{"fesabelilla.rokomari@gmail.com"},
 		[]byte(msgBody),
 	)
 	if err != nil {
